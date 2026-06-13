@@ -1,0 +1,11 @@
+{
+  "name": "food-delivery-root",
+  "private": true,
+  "workspaces": [
+    "./food -del"
+  ],
+  "scripts": {
+    "build": "npm --prefix \"./food -del\" run build",
+    "start": "npm --prefix \"./food -del\" start"
+  }
+}
