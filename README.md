@@ -18,6 +18,30 @@
 - The backend uses Express and Nodemon.
 - If port `5173` is already in use, Vite will try another port automatically.
 
+## Deployment
+
+### Frontend
+
+1. Build the React app:
+   - `npm --prefix frontend run build`
+2. Deploy the static `frontend/dist` folder to any static hosting provider such as Netlify, Vercel, GitHub Pages, or Firebase Hosting.
+3. If you want to serve the frontend from the backend, copy `frontend/dist` into the backend public folder and configure Express to serve static files.
+
+### Backend
+
+1. Install dependencies in the backend folder:
+   - `npm --prefix backend install`
+2. Ensure environment variables are set for MongoDB and any secrets used by the server.
+3. Deploy the backend to a Node.js host such as Heroku, Render, Railway, Azure App Service, or any VPS.
+4. Start the app with:
+   - `node server.js`
+   - or `npm --prefix backend run server`
+
+### Full-stack deployment options
+
+- Deploy the backend as a Node.js API and the frontend as a separate static app.
+- Or deploy both together by serving the built frontend files from the backend Express server.
+
 ## Project Structure
 
 ```text
