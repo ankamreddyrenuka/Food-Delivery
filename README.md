@@ -17,3 +17,82 @@
 - The frontend uses Vite.
 - The backend uses Express and Nodemon.
 - If port `5173` is already in use, Vite will try another port automatically.
+
+## Project Structure
+
+```text
+Food-Delivery/
+├── README.md
+└── food -del/
+    ├── package.json
+    ├── backend/
+    │   ├── package.json
+    │   ├── server.js
+    │   ├── config/
+    │   │   └── db.js
+    │   ├── controllers/
+    │   │   └── foodController.js
+    │   ├── middleware/
+    │   ├── models/
+    │   │   └── foodModel.js
+    │   ├── routes/
+    │   │   └── foodRoute.js
+    │   └── uploads/
+    └── frontend/
+        ├── package.json
+        ├── eslint.config.js
+        ├── index.html
+        ├── README.md
+        ├── vite.config.js
+        ├── public/
+        └── src/
+            ├── App.css
+            ├── App.jsx
+            ├── index.css
+            ├── main.jsx
+            ├── assets/
+            │   └── assets.js
+            ├── components/
+            │   ├── AppDownload/
+            │   │   ├── AppDownload.css
+            │   │   └── Appdownload.jsx
+            │   ├── context/
+            │   │   └── StoreContext.jsx
+            │   ├── ExploreMenu/
+            │   │   ├── ExploreMenu.css
+            │   │   └── ExploreMenu.jsx
+            │   ├── FoodDisplay/
+            │   │   ├── FoodDisplay.css
+            │   │   └── FoodDisplay.jsx
+            │   ├── FoodItem/
+            │   │   ├── FoodItem.css
+            │   │   └── FoodItem.jsx
+            │   ├── Footer/
+            │   │   ├── footer.css
+            │   │   └── footer.jsx
+            │   ├── LoginPopup/
+            │   │   ├── loginPopup.css
+            │   │   └── loginPopup.jsx
+            │   ├── navbar/
+            │   │   ├── navbar.css
+            │   │   ├── navbar.jsx
+            │   │   └── Header/
+            │   │       ├── header.css
+            │   │       └── header.jsx
+            └── pages/
+                ├── Auth/
+                │   ├── Auth.css
+                │   └── Auth.jsx
+                ├── Cart/
+                │   ├── Cart.css
+                │   └── Cart.jsx
+                ├── Home/
+                │   ├── Home.css
+                │   └── Home.jsx
+                ├── Menu/
+                │   ├── Menu.css
+                │   └── Menu.jsx
+                └── PlaceOrder/
+                    ├── PlaceOrder.css
+                    └── PlaceOrder.jsx
+```
