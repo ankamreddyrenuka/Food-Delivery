@@ -1,0 +1,102 @@
+/* Main popup wrapper (positioned inside header) */
+.login-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup container (card style) */
+.login-popup-container {
+  width: 350px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  animation: popupFade 0.3s ease;
+}
+
+/* Title section */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-popup-title h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Close icon */
+.login-popup-title img {
+  width: 18px;
+  cursor: pointer;
+}
+
+/* Input fields */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-popup-inputs input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Button */
+.login-popup-container button {
+  padding: 12px;
+  border: none;
+  background-color: #ff4c24;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-popup-container button:hover {
+  background-color: #e0431f;
+}
+
+/* Toggle text */
+.login-popup-container p {
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-popup-container span {
+  color: #ff4c24;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
