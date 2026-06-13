@@ -1,6 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { connectDB } from './config/db.js'
 import foodRouter from './routes/foodRoute.js'
 
@@ -20,6 +23,17 @@ connectDB()
 
 // Routes
 app.use('/api/foods', foodRouter)
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const frontendDistPath = path.join(__dirname, '../frontend/dist')
+
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath))
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'))
+  })
+}
 
 app.get('/', (req, res) => {
   res.send('Hello from the backend!')
